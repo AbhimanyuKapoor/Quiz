@@ -231,11 +231,11 @@ public class CreateQuestion extends JFrame implements ActionListener, FocusListe
 	{		
 		if(current_question<count)
 		{
-			questionText.set(current_question, questionField.getText());
-			optionsA.set(current_question, btnA.getText());
-			optionsB.set(current_question, btnB.getText());
-			optionsC.set(current_question, btnC.getText());
-			optionsD.set(current_question, btnD.getText());
+			questionText.set(current_question, questionField.getText().replace(';', ' '));
+			optionsA.set(current_question, btnA.getText().replace(';', ' '));
+			optionsB.set(current_question, btnB.getText().replace(';', ' '));
+			optionsC.set(current_question, btnC.getText().replace(';', ' '));
+			optionsD.set(current_question, btnD.getText().replace(';', ' '));
 			ans.set(current_question, optionsBox.getSelectedIndex());
 			
 			addFileValues();
